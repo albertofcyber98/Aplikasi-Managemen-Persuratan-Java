@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c4ca5c9d-8a14-4b32-9c4b-35dfd6a8186d">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     surat_masuk.`id` AS surat_masuk_id,
+     surat_masuk.`no_surat` AS no_surat,
+     surat_masuk.`tgl_surat` AS tgl_surat,
+     surat_masuk.`tgl_terima` AS tgl_terima,
+     surat_masuk.`perihal` AS perihal,
+     surat_masuk.`sifat` AS sifat,
+     surat_masuk.`lampiran` AS lampiran,
+     surat_masuk.`kode_instansi` AS surat_masuk_kode_instansi,
+     instansi.`id` AS instansi_id,
+     instansi.`kode_instansi` AS instansi_kode_instansi,
+     instansi.`nama_instansi` AS nama_instansi,
+     instansi.`alamat` AS instansi_alamat
+FROM
+     `surat_masuk` surat_masuk inner join
+     `instansi` instansi on(surat_masuk.`kode_instansi`=instansi.`kode_instansi`)]]>
+	</queryString>
+	<field name="surat_masuk_id" class="java.lang.Integer"/>
+	<field name="no_surat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_surat" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_terima" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="perihal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sifat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lampiran" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="surat_masuk_kode_instansi" class="java.lang.String"/>
+	<field name="instansi_id" class="java.lang.Integer"/>
+	<field name="instansi_kode_instansi" class="java.lang.String"/>
+	<field name="nama_instansi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="instansi_alamat" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="143" y="17" width="291" height="47" uuid="6979a404-83ee-41a2-a8a7-6171d9be6b06"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="28"/>
+				</textElement>
+				<text><![CDATA[Laporan Surat Masuk]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="8" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="572" height="1" uuid="6e3f42b5-3c15-4812-863c-c761e76c8672"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="29" width="572" height="1" uuid="8d8cf1fd-229a-40a1-8c76-5851564a5d90"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="10" width="67" height="20" uuid="e87d67eb-5fdd-4003-b46e-a032cffb90ef"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[No Surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="9" width="67" height="20" uuid="fe3376f0-dfba-4b0b-9b9a-7f59ebbe8572"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Tanggal Surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="9" width="77" height="20" uuid="00b0e64d-86e5-45f5-ba45-4f8ac575bedf"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Tanggal Terima]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="9" width="77" height="20" uuid="c57caff3-4898-4036-aeb2-9402daabd0ee"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Perihal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="9" width="77" height="20" uuid="97eb00c5-18fb-46ac-974e-bfcdb174dbdc"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Sifat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="9" width="62" height="20" uuid="b2b6fd12-774b-4160-9fc2-71c7dd5c81c4"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Lampiran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="453" y="9" width="99" height="20" uuid="bf98c8be-b3e4-4579-8b51-f25bc6c35a71"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nama Instansi]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="28" width="572" height="1" uuid="db356df9-a1cf-4bc1-84b1-121839324d56"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="0" width="67" height="29" uuid="4973e229-9a3c-4975-8f2b-69d52b59ea1b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{no_surat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="0" width="77" height="28" uuid="ca68711c-9a1b-4cf0-ac26-5cb657b31b07"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tgl_terima}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="0" width="67" height="28" uuid="4246b53b-dbfc-41e7-a342-596c6ac13336"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tgl_surat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="211" y="0" width="94" height="28" uuid="f01325de-3b5c-4773-86d5-39a2b202656f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{perihal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="391" y="1" width="62" height="28" uuid="ec16a6df-454e-4eac-9ae6-cddff1170803"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lampiran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="0" width="119" height="28" uuid="e226518f-e77d-49d3-b9fd-120862f7a82d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nama_instansi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="1" width="86" height="26" uuid="42893010-fcd7-4216-a4d9-a978d5de0446"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{sifat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="4" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
